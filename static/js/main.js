@@ -82,7 +82,7 @@ function generateResponse() {
         // Calculate response time
         const endTime = new Date();
         const responseTime = ((endTime - startTime) / 1000).toFixed(2);
-        addMessage(`${data.response}\n\nResponse time: ${responseTime}s`);
+        addMessage(`${data.response}\n\n${responseTime}s`);
     })
     .catch(error => {
         loadingDiv.remove();
