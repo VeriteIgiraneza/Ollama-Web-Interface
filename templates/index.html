@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h2>Menu</h2>
+            <ul>
+                <li>Chat History</li>
+                <li class="theme-item">
+                    Theme
+                    <div class="theme-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                            <span class="toggle-text">🌞</span>
+                        </label>
+                    </div>
+                </li>
+                <li>Models</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <button id="toggle-sidebar" class="toggle-btn">☰</button>
+
+        <h1>AI Chat Interface</h1>
+        <div id="chat-history" class="chat-history"></div>
+        <div class="input-container">
+            <textarea id="prompt" rows="4" placeholder="Enter your prompt here..."></textarea>
+            <button onclick="generateResponse()">Enter</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
